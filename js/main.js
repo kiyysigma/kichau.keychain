@@ -418,8 +418,8 @@ function konfirmasiWA() {
 function initKontak() {
   const s = KONFIG.sosial;
   $("#sosial").innerHTML = [
-    ["📸", "Instagram", "@kichau.id", s.instagram], ["🎵", "TikTok", "@kichau.id", s.tiktok],
-    ["🛍", "Shopee", "Kichau Official", s.shopee], ["🛒", "Tokopedia", "Kichau Store", s.tokopedia]
+    ["📸", "Instagram", "@kichau.keychain", s.instagram], ["🎵", "TikTok", "@kichau.keychain", s.tiktok],
+    ["🛍", "Shopee", "kichau.keychain", s.shopee], ["🛒", "Tokopedia", "kichau.keychain", s.tokopedia]
   ].map(([i, n, h, u]) => `<a class="kartu-sosial reveal" href="${u}" target="_blank" rel="noopener"><span class="ikon">${i}</span><b>${n}</b><small>${h}</small></a>`).join("");
   $("#k-wa").href = `https://wa.me/${KONFIG.noWA}`; $("#k-wa-teks").textContent = KONFIG.noWATampil;
   $("#k-email").href = `mailto:${KONFIG.email}`; $("#k-email-teks").textContent = KONFIG.email;
