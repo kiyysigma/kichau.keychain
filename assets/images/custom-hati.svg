@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<rect width="400" height="400" fill="#F9E6EC"/>
+<circle cx="200" cy="230" r="150" fill="#fff" opacity=".45"/>
+<circle cx="200" cy="64" r="26" fill="none" stroke="#8A8F98" stroke-width="7"/>
+<rect x="194" y="88" width="12" height="34" rx="6" fill="none" stroke="#8A8F98" stroke-width="6"/>
+
+<path d="M200 330 C90 250 105 150 160 150 C185 150 200 168 200 185 C200 168 215 150 240 150 C295 150 310 250 200 330z" fill="#F0A5B5" stroke="#fff" stroke-width="8"/>
+<path d="M150 175 q-22 16 -18 50" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="7" stroke-linecap="round"/>
+<text x="200" y="245" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="700" fill="#fff" font-style="italic">Bestie</text>
+<g fill="#fff"><circle cx="255" cy="195" r="3"/><circle cx="270" cy="225" r="2.5"/></g>
+</svg>
