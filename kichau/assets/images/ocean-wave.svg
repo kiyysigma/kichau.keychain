@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<rect width="400" height="400" fill="#E0EEF5"/>
+<circle cx="200" cy="230" r="150" fill="#fff" opacity=".45"/>
+<circle cx="200" cy="64" r="26" fill="none" stroke="#8A8F98" stroke-width="7"/>
+<rect x="194" y="88" width="12" height="34" rx="6" fill="none" stroke="#8A8F98" stroke-width="6"/>
+
+<defs><clipPath id="c"><circle cx="200" cy="235" r="105"/></clipPath><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CC4E3"/><stop offset="1" stop-color="#3F7FAE"/></linearGradient></defs>
+<circle cx="200" cy="235" r="105" fill="url(#g)"/>
+<g clip-path="url(#c)">
+<path d="M80 230 q30 -30 60 0 t60 0 t60 0 t60 0 v140 h-240z" fill="#fff" opacity=".55"/>
+<path d="M80 262 q30 -28 60 0 t60 0 t60 0 t60 0 v140 h-240z" fill="#4F8FB8" opacity=".8"/>
+<path d="M80 296 q30 -26 60 0 t60 0 t60 0 t60 0 v140 h-240z" fill="#2F6A99"/>
+<g fill="#fff" opacity=".9"><circle cx="160" cy="190" r="3"/><circle cx="240" cy="180" r="4"/><circle cx="215" cy="205" r="2.5"/></g></g>
+<circle cx="200" cy="235" r="105" fill="none" stroke="#fff" stroke-width="6"/>
+</svg>

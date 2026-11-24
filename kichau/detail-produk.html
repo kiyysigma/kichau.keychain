@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detail Produk — Kichau</title>
+  <meta name="description" content="Detail gantungan kunci Kichau.">
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <!-- Font Google: Plus Jakarta Sans (judul) & Inter (isi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="detail" class="ada-aksi-bawah">
+  <div id="site-header"></div>
+  <main class="container">
+    <div class="breadcrumb"><a href="index.html">Beranda</a> / <a href="katalog.html">Katalog</a> / <span id="bc-nama"></span></div>
+
+    <!-- Tampilan split-screen: foto kiri, info kanan -->
+    <section class="detail">
+      <div class="detail-galeri">
+        <div class="zoom-img"><img id="d-gambar" src="" alt=""></div>
+      </div>
+
+      <div class="detail-info">
+        <span class="eyebrow" id="d-kategori"></span>
+        <h1 id="d-nama"></h1>
+        <div class="detail-harga" id="d-harga"></div>
+        <p class="detail-desc" id="d-desc"></p>
+        <div class="spek" id="d-bahan"></div>
+
+        <!-- Pilihan variasi warna -->
+        <div class="grup">
+          <span class="label">Warna: <span id="d-warna-nama" style="font-weight:500"></span></span>
+          <div class="swatch-wrap" id="d-warna"></div>
+        </div>
+
+        <!-- Kolom catatan / teks custom + pratinjau -->
+        <div class="grup">
+          <label class="label" for="catatan" id="label-catatan">Catatan</label>
+          <input class="input" id="catatan" type="text" autocomplete="off">
+          <p class="catatan-kecil">Maksimal 12 karakter (couple set 24). Pratinjau hanya perkiraan tampilan.</p>
+          <div id="preview-wrap" hidden>
+            <div class="preview-custom"><div id="preview-box"></div></div>
+          </div>
+        </div>
+
+        <!-- Jumlah -->
+        <div class="grup">
+          <span class="label">Jumlah</span>
+          <div class="qty"><button id="qty-min" aria-label="Kurangi">−</button><span id="d-qty">1</span><button id="qty-plus" aria-label="Tambah">+</button></div>
+        </div>
+
+        <!-- Tombol (desktop) -->
+        <div class="detail-aksi">
+          <button class="btn btn-primer desktop-saja js-tambah">Tambah ke Keranjang</button>
+          <button class="btn btn-garis desktop-saja js-beli">Beli Sekarang</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="terkait">
+      <h2 class="section-judul">Kamu mungkin suka</h2>
+      <div class="grid-produk" id="terkait" style="margin-top:20px"></div>
+    </section>
+  </main>
+
+  <!-- Sticky bottom action bar (khusus mobile) -->
+  <div class="aksi-bawah">
+    <div class="info"><small>Total</small><b id="bar-total">Rp0</b></div>
+    <button class="btn btn-primer js-tambah">+ Keranjang</button>
+    <button class="btn btn-aksen js-beli">Beli</button>
+  </div>
+  <div id="site-footer"></div>
+  <!-- Data produk dulu, baru logika utama -->
+  <script src="js/data-produk.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

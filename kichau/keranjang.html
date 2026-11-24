@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keranjang & Checkout — Kichau</title>
+  <meta name="description" content="Keranjang belanja dan checkout Kichau.">
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <!-- Font Google: Plus Jakarta Sans (judul) & Inter (isi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="keranjang">
+  <div id="site-header"></div>
+  <main class="container">
+    <div class="page-header"><span class="eyebrow">Checkout</span><h1>Keranjang Belanja</h1></div>
+
+    <!-- Tampil jika keranjang kosong -->
+    <div class="keranjang-kosong" id="cart-kosong" hidden>
+      <div class="emoji">🛒</div><h2>Keranjangmu masih kosong</h2>
+      <p class="section-sub" style="margin:8px auto 22px">Yuk pilih gantungan kunci favoritmu dulu.</p>
+      <a href="katalog.html" class="btn btn-primer">Mulai Belanja</a>
+    </div>
+
+    <!-- Tampil jika ada barang -->
+    <div class="keranjang-layout" id="cart-ada" hidden>
+      <div>
+        <!-- 1. Daftar barang -->
+        <div class="kotak"><h2>1. Ringkasan Belanja</h2><div id="cart-list"></div></div>
+
+        <form id="form-checkout" novalidate>
+          <!-- 2. Alamat pengiriman -->
+          <div class="kotak">
+            <h2>2. Data & Alamat Pengiriman</h2>
+            <div class="form-grid">
+              <div class="field"><label for="nama">Nama penerima</label><input class="input" id="nama" name="nama" autocomplete="name"><span class="error">Nama wajib diisi</span></div>
+              <div class="field"><label for="hp">No. WhatsApp / HP</label><input class="input" id="hp" name="hp" type="tel" inputmode="tel" autocomplete="tel"><span class="error">Isi nomor HP yang valid</span></div>
+              <div class="field penuh"><label for="pengiriman">Metode pengiriman</label><select class="select" id="pengiriman"></select></div>
+              <div class="field penuh"><label for="alamat">Alamat lengkap / lokasi COD (kampus, sekolah)</label><textarea class="textarea" id="alamat" name="alamat"></textarea><span class="error">Alamat wajib diisi</span></div>
+              <div class="field penuh"><label for="catatan">Catatan tambahan (opsional)</label><input class="input" id="catatan" name="catatan"></div>
+            </div>
+          </div>
+          <!-- 3. Metode pembayaran -->
+          <div class="kotak"><h2>3. Metode Pembayaran</h2><div class="bayar-opsi" id="metode"></div>
+            <p class="catatan-sim">Simulasi pembayaran untuk keperluan tugas: nomor rekening/QR adalah data contoh.</p></div>
+        </form>
+      </div>
+
+      <!-- Ringkasan total -->
+      <aside class="ringkasan">
+        <div class="kotak">
+          <h2>Total Pembayaran</h2>
+          <div class="baris-total"><span>Subtotal</span><span id="t-sub"></span></div>
+          <div class="baris-total"><span>Ongkos kirim</span><span id="t-ongkir"></span></div>
+          <div class="baris-total besar"><span>Total</span><span id="t-total"></span></div>
+          <button class="btn btn-wa btn-blok desktop-tombol-bayar js-konfirmasi" style="margin-top:18px">Konfirmasi via WhatsApp</button>
+          <p class="catatan-sim">Rincian pesanan akan disusun otomatis dan dikirim ke WhatsApp penjual.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Sticky bottom action bar (mobile) -->
+  <div class="aksi-bawah">
+    <div class="info"><small>Total</small><b id="bar-total">Rp0</b></div>
+    <button class="btn btn-wa js-konfirmasi">Konfirmasi via WA</button>
+  </div>
+
+  <!-- Modal QRIS -->
+  <div class="modal-latar" id="modal-qris"><div class="modal">
+    <h3>Bayar dengan QRIS</h3><p class="item-meta">Total <b id="qris-total"></b></p>
+    <div class="qr-box" id="qr-box"></div>
+    <p class="item-meta">Selesaikan pembayaran dalam</p><div class="timer" id="qris-timer">15:00</div>
+    <p class="catatan-sim">QR ini hanya simulasi (bukan QR asli).</p>
+    <button class="btn btn-primer btn-blok js-tutup-qris">Saya Sudah Bayar / Tutup</button>
+  </div></div>
+
+  <!-- Modal sukses -->
+  <div class="modal-latar" id="modal-sukses"><div class="modal">
+    <div style="font-size:3rem">🎉</div><h3>Pesanan disiapkan!</h3>
+    <p class="item-meta">WhatsApp sudah terbuka dengan rincian pesananmu. Tekan kirim agar penjual memprosesnya.</p>
+    <a href="index.html" class="btn btn-primer btn-blok">Kembali ke Beranda</a>
+  </div></div>
+
+  <div id="site-footer"></div>
+  <!-- Data produk dulu, baru logika utama -->
+  <script src="js/data-produk.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

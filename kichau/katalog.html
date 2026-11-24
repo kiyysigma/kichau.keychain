@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katalog — Kichau</title>
+  <meta name="description" content="Daftar lengkap gantungan kunci Kichau.">
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <!-- Font Google: Plus Jakarta Sans (judul) & Inter (isi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="katalog">
+  <div id="site-header"></div>
+  <main class="container">
+    <div class="page-header">
+      <span class="eyebrow">Katalog</span>
+      <h1>Semua Gantungan Kunci</h1>
+      <p class="section-sub" style="margin-bottom:0">Cari yang paling cocok dengan gayamu.</p>
+    </div>
+
+    <!-- Filter kategori + pencarian + urutan -->
+    <div class="toolbar">
+      <div class="chip-wrap" id="chips"></div>
+      <div class="toolbar-kanan">
+        <input class="input" type="search" id="cari" placeholder="Cari produk…" aria-label="Cari produk">
+        <select class="select" id="urut" aria-label="Urutkan">
+          <option value="">Urutkan</option><option value="murah">Termurah</option><option value="mahal">Termahal</option>
+        </select>
+      </div>
+    </div>
+    <p id="jumlah-hasil" class="item-meta" style="margin-bottom:14px"></p>
+
+    <!-- Grid produk (3–4 kolom di desktop, 2 kolom di mobile) -->
+    <div class="grid-produk" id="grid-katalog" style="padding-bottom:72px"></div>
+  </main>
+  <div id="site-footer"></div>
+  <!-- Data produk dulu, baru logika utama -->
+  <script src="js/data-produk.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
