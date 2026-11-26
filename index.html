@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kichau — Key Chain Kacau | Gantungan Kunci Unik & Custom</title>
+  <meta name="description" content="Kichau menjual gantungan kunci unik, estetik, dan custom.">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <!-- Font Google: Plus Jakarta Sans (judul) & Inter (isi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="beranda">
+  <!-- Navbar disisipkan otomatis oleh main.js -->
+  <div id="site-header"></div>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="container">
+      <div>
+        <span class="eyebrow">Kichau Keychain</span>
+        <h1>Pin <em>keren</em>, bikin gayamu makin beda.</h1>
+        <p>Koleksi pin dengan desain unik untuk tas, jaket, topi, dan koleksimu. Harga ramah di kantong, mulai dari Rp5.000.</p>
+        <div class="hero-aksi">
+          <a href="katalog.html" class="btn btn-primer">Belanja Sekarang</a>
+          <a href="tentang-kontak.html" class="btn btn-garis">Hubungi Kami</a>
+        </div>
+      </div>
+      <!-- Gambar melayang (animasi floating) -->
+      <div class="hero-gambar"><img src="assets/images/hero-pin.png" alt="Koleksi pin Kichau"></div>
+    </div>
+  </header>
+
+  <!-- ===== KEUNGGULAN ===== -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow reveal">Kenapa Kichau</span>
+      <h2 class="section-judul reveal">Kecil, tapi dibuat serius.</h2>
+      <p class="section-sub reveal">Setiap pin kami dikerjakan dengan teliti dan dicetak dengan jelas.</p>
+      <div class="grid-keunggulan">
+        <div class="kartu-fitur reveal"><div class="ikon">🎨</div><h3>Desain Unik</h3><p>Karakter dan motif orisinal yang nggak ada di toko lain.</p></div>
+        <div class="kartu-fitur reveal"><div class="ikon">✏️</div><h3>Mudah Dipakai</h3><p>Pin kecil untuk tas, jaket, topi, atau pajangan koleksi.</p></div>
+        <div class="kartu-fitur reveal"><div class="ikon">💪</div><h3>Cetak Jelas</h3><p>Gambar tercetak tajam dengan permukaan glossy.</p></div>
+        <div class="kartu-fitur reveal"><div class="ikon">💸</div><h3>Harga Pelajar</h3><p>Hanya Rp5.000 – Rp7.000, cocok untuk kantong pelajar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BEST SELLERS (diisi dari data-produk.js) ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <span class="eyebrow reveal">Best Sellers</span>
+      <h2 class="section-judul reveal">Paling banyak dicari</h2>
+      <p class="section-sub reveal">Favorit pelanggan Kichau.</p>
+      <div class="grid-produk" id="best-sellers"></div>
+      <div class="lihat-semua reveal"><a href="katalog.html" class="btn btn-garis">Lihat Semua Produk →</a></div>
+    </div>
+  </section>
+
+  <!-- ===== CERITA DI BALIK NAMA ===== -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cerita reveal">
+        <div>
+          <span class="eyebrow">Cerita Kami</span>
+          <h2 class="section-judul">Kenapa namanya “Key Chain Kacau”?</h2>
+          <p>Berawal dari tumpukan kunci yang selalu kacau di tas kami. Kunci kos, kunci motor, kunci loker: semuanya mirip dan sering tertukar.</p>
+          <p>Dari kekacauan itu lahirlah Kichau: gantungan kunci yang justru bikin barang-barangmu mudah dikenali. Kacau di nama, rapi di hasil.</p>
+          <a href="tentang-kontak.html" class="btn btn-aksen" style="margin-top:10px">Kenal Lebih Dekat</a>
+        </div>
+        <div class="cerita-kata">
+          <div><strong>5</strong>Desain pin</div><div><strong>Rp5–7rb</strong>Kisaran harga</div>
+          <div><strong>WA</strong>Pesan via WhatsApp</div><div><strong>1–3</strong>Hari pengerjaan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <!-- Data produk dulu, baru logika utama -->
+  <script src="js/data-produk.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
